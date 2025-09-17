@@ -271,7 +271,7 @@ body {
 .label {
   position: absolute;
   font-family: vortigra, sans-serif;
-  bottom: 145px;
+  bottom: 115px;
   left: 15px;
   color: #fcf9f3;
   font-weight: bold;
@@ -281,7 +281,7 @@ body {
 }
 
 .lbl{
-    bottom: 125px;
+    bottom: 115px;
 }
 
 #mani {
@@ -513,4 +513,5 @@ footer {
   background: #d0c2db;
   color: #961d81;
   transform: scale(1.08);
+
 }
