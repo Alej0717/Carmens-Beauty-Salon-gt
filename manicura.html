@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carmen's Beauty</title>
+  <link rel="stylesheet" href="manicura.css">
+</head>
+<body>
+  <!--Header-->
+  <header id="main-header">
+    <!--NAVLINKS-->
+    <nav class="navbar">
+      <div class="navbardiv">
+        <img class="logo" src="carmen blanco.png" alt="logo"> <!--LOGO-->
+        <!--Links en forma de lista-->
+        <ul class="navlist">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="servicios.html">Servicios</a>
+            <div class="menu">
+              <div class="columna">
+                <h4>Manicura</h4>
+                <a href="manicura.html">Manicura y Pedicura</a>
+              </div>
+              <div class="columna">
+                <h4>Pestañas y Cejas</h4>
+                <a href="pestañas.html">Servicios de pestañas y cejas</a>
+              </div>
+              <div class="columna">
+                <h4>Cabello</h4>
+                <a href="cabello.html">Servicios capilares</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="ubicacion.html">Contacto</a></li>
+          <li><a href="portafolio.html">Galería</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<main>
+  <section class="imagenfondo">
+    <img src="manicurepar.png" alt="Imagen de fondo de manicura">
+  </section>
+  <h1 class="titu">UÑAS SERVICIOS</h1>
+  <section class="gallery">
+    <div class="card">
+      <img src="acrilic.png" alt="Summer Vibes" />
+      <div class="label">UÑAS ACRÍLICAS</div>
+      <p class="desc">Transforma tus manos con nuestras uñas acrílicas personalizadas. Elige entre una variedad de diseños, colores y formas para expresar tu estilo único. Resistentes, elegantes y hechas con precisión profesional para un look impactante.</p>
+    </div>
+    <div class="card">
+      <img src="gelish.png" alt="Trendy" />
+      <div id="mani" class="label">MANICURE CLÁSICO</div>
+      <p class="desc">Dale a tus manos el cuidado que merecen con nuestra manicura clásica. Incluye limado, limpieza de cutículas y aplicación de esmalte tradicional o en gel, para un acabado brillante, duradero y elegante. Perfecta para lucir uñas impecables en cualquier ocasión.
+
+</p>
+    </div>
+    <div class="card">
+      <img src="pedcurespa.png" alt="Casual" />
+      <div class="label">PEDICURE SPA</div>
+      <p class="desc">Relájate y consiente tus pies con nuestra pedicura spa. Disfruta de una exfoliación revitalizante, un masaje relajante y un esmaltado de alta duración. Ideal para renovar tus pies y sentirte renovada de pies a cabeza.</p>
+    </div>
+  </section>
+
+
+  
+<section class="dudas">
+  <div class="faq-container">
+    <div class="faq-image">
+      <img src="pregunta.png" alt="Pregunta" />
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item">
+        <input type="checkbox" id="faq1" />
+        <label for="faq1">¿Cómo se realiza?</label>
+        <div class="faq-content">
+          <p>El manicure comienza con la <b>limpieza de las uñas y manos.</b> Se remueve el esmalte anterior (si lo hay), se recorta y da forma a las uñas, y se empujan o eliminan las cutículas. Luego se realiza una <b>exfoliación suave</b> y se hidratan las manos. Finalmente, se aplica el esmalte elegido (tradicional, semipermanente o en gel).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq2" />
+        <label for="faq2">¿Cuál es la duración de los servicios de uñas?</label>
+        <div class="faq-content">
+          <p>El procedimiento suele tardar <b>entre 30 a 45 minutos</b>, dependiendo del tipo de esmalte y si se incluye algún tratamiento adicional (como parafortina, masajes o decoración).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq4" />
+        <label for="faq4">¿Cada cuánto tiempo debo repetir el servicio?</label>
+        <div class="faq-content">
+          <p>Se recomienda realizar el manicure <b>cada 2 o 3 semanas</b>, dependiendo del crecimiento de la uña y el tipo de esmalte utilizado.
+
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+  <footer>
+    <div class="footer">
+      <p>&copy; 2025 Carmen's Beauty. <br>Alejandro Acevedo <br>C5A</p>
+      <ul class="footerlinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="ubicacion.html">Contacto</a></li>
+        <li><a href="portafolio.html">Galería</a></li>
+      </ul>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+      <img class="logofooter" src="logoblanco.png" alt="logo footer">
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('main-header');
+      const logo = document.querySelector('.logo');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+        logo.src = "isotipo logo.png"; // Cambia a isotipo al hacer scroll
+      } else {
+        header.classList.remove('scrolled');
+        logo.src = "carmen blanco.png"; // Vuelve al logo blanco al subir
+      }
+    });
+  </script>
+
+  <button id="scrollTopBtn" title="Subir" aria-label="Subir al inicio">&#8679;</button>
+  <script>
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > window.innerHeight / 2) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+    document.getElementById('scrollTopBtn').onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>

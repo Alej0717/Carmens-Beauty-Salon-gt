@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carmen's Beauty</title>
+  <link rel="stylesheet" href="servicios.css">
+</head>
+<body>
+  <!--Header-->
+  <header id="main-header">
+    <!--NAVLINKS-->
+    <nav class="navbar">
+      <div class="navbardiv">
+        <img class="logo" src="isotipo logo.png" alt="logo"> <!--LOGO-->
+        <!--Links en forma de lista-->
+        <ul class="navlist">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Servicios</a>
+            <div class="menu">
+              <div class="columna">
+                <h4>Manicura</h4>
+                <a href="manicura.html">Manicura y Pedicura</a>
+              </div>
+              <div class="columna">
+                <h4>Pestañas y Cejas</h4>
+                <a href="pestañas.html">Servicios de pestañas y cejas</a>
+              </div>
+              <div class="columna">
+                <h4>Cabello</h4>
+                <a href="cabello.html">servicios capilares</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="ubicacion.html">Contacto</a></li>
+          <li><a href="portafolio.html">Galería</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+<main>
+  <div class="top-bar">
+    <div class="title-block">
+      <h1>→ ESTILIZATE</h1>
+      <p>
+        INSPÍRATE CON NUESTROS SERVICIOS Y COMPARTE TUS LOOKS EN REDES SOCIALES CON 
+        <strong>@Carmensbeauty</strong> Y <strong>#CARMENSBEAUTY</strong>.
+      </p>
+    </div>
+    <a href="portafolio.html"><button class="see-all">Ver nuestros trabajos</button></a>
+  </div>
+
+  <section class="gallery">
+    <div class="card">
+      <a href="manicura.html"><img src="manoilus.png" alt="Manos femeninas reciben manicura profesional con esmalte rosa"></a>
+      <div class="label">UÑAS</div>
+    </div>
+    <div class="card">
+      <a href="pestañas.html"><img src="pestañailus.png" alt="Trendy" /></a>
+      <div class="label" id="pest">PESTAÑAS <br>Y CEJAS</div>
+    </div>
+    <div class="card">
+      <a href="cabello.html"><img src="peloilus.png" alt="Casual" /></a>
+      <div class="label">CABELLO</div>
+    </div>
+  </section>
+
+
+</main>
+  <footer>
+    <div class="footer">
+      <p>&copy; 2025 Carmen's Beauty. <br>Alejandro Acevedo <br>C5A</p>
+      <ul class="footerlinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="ubicacion.html">Contacto</a></li>
+        <li><a href="portafolio.html">Galería</a></li>
+      </ul>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+      <img class="logofooter" src="logoblanco.png" alt="logo footer">
+    </div>
+  </footer>
+
+    <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
+

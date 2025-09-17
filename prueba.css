@@ -1,0 +1,1079 @@
+/*FUENTES PERSONALIZADAS*/
+@font-face {
+  font-family: 'Vortigra';
+  src: url('vortigra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*AJUSTES DE PANTALLA*/
+@media screen and (max-width: 768px) {
+  #main-header {
+    height: 80px;
+    padding: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navlist {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 200px;
+    margin-left: -500px;
+    margin-top: -20px;
+  }
+
+  .eslogan {
+    font-size: 24px;
+    margin-left: -150px;
+  }
+
+  .inimujer {
+    width: 300px;
+    margin-left: -100px;
+    margin-top: -200px;
+  }
+}
+
+
+/*****************************************************************INICIO***********************************************************/
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+/* Header transparente */
+#main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 134px;
+  background: transparent;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  z-index: 99999; /* Aumenta el z-index para estar por encima de todo */
+  padding: 20px 0;
+}
+
+#main-header.scrolled {
+  background: #fcf9f3;
+  box-shadow: 0 2px 12px rgba(150,29,129,0.08);
+  height: 97px;         
+  padding: 5px 0;       
+  color: #961d81;
+  transition: height 0.4s, padding 0.4s, background 0.4s, box-shadow 0.4s;
+}
+
+#main-header.scrolled .navbar {
+  padding: 5px 0; 
+  border-bottom-width: 8.5px;
+}
+
+#main-header.scrolled .navlist a {
+  color: #961d81;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  font-weight: 450;
+  padding: 5px 11px; 
+}
+
+#main-header.scrolled .logo {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: -650px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 16px 0; 
+  position: relative;
+  z-index: 99999; /* Refuerza el z-index en los elementos del menú */
+}
+
+.navbardiv {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-left: -50px;
+
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navlist li {
+  position: relative;
+}
+
+.navlist a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+}
+
+.navlist a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ffffff, 0 0 20px #fff;
+}
+
+/* Logo */
+.logo {
+  width: 110px;
+  position: absolute;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: -775px;
+}
+
+/* Transiciones para suavidad */
+.navbar, .navlist a, .logo {
+  transition: all 0.4s;
+}
+
+/**************************************************************** Menú desplegable******************************************************** */
+.dropdown:hover .menu {
+  display: flex;
+}
+
+.menu {                              /*Dimensiones y especificaciones del menú*/
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    width: 700px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    border-top: 2px solid #961d81;
+    z-index: 999;
+  }
+  
+  .columna {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    margin-right: 20px;
+  }
+  
+  .columna h4 {
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+    border-bottom: 1px solid #961d81;
+    padding-bottom: 4px;
+    font-weight: bold;
+  }
+  
+  .columna a {
+    padding: 4px 0;
+    color: #000;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: lighter;
+  }
+  
+  .columna a:hover {
+    color: #961d81;
+    font-weight: bolder;
+  }
+
+/**************************************************************Sección con imagen de fondo **************************************************/
+.diveslogan {
+  height: 550px;
+  background-color: #fcf9f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eslogan {
+  color: #961d81;
+  font-size: 32px;
+  position: absolute;  
+  margin-left: -300px;
+  text-align: center;
+  font-family: 'Vortigra', sans-serif;
+}
+
+.eslogan h2 {
+  font-weight: lighter;
+}
+
+/*Imagen inicio*/
+
+.inimujer{
+  width: 500px;
+  position:absolute;
+  margin-left: 400px;
+  margin-top: -365px;
+  z-index: -1;
+}
+
+
+
+/*********************************************************QUIENES SOMOS SECTION****************************************************************/
+
+
+.quienes {
+  height: 500px;
+  position: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #961d81;
+  transition: transform 1s cubic-bezier(.23,1.01,.32,1);
+}
+
+.quienes:hover {
+  transform: scale(1.05);
+}
+
+.quienes h2 {
+  font-size: 48px;
+  color: #fcf9f3;
+  align-items: center;
+  margin-top: 175px;
+  margin-left: 150px;
+  position: absolute;
+  font-family: 'Vortigra', sans-serif;
+  font-weight: lighter;
+}
+.quienes p {
+  position: absolute;
+  color:#fcf9f3;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 22px;
+  width: 650px;
+  margin-left: 700px;
+  margin-top: 145px;
+  text-align: justify;
+}
+
+/********************************************************EFECTO PARALLAX IMG****************************************************************/
+.parallax {
+  background-image: url('parallaximg2.jpg');
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+
+.parallax:hover {
+  background-image: url('parallaximg.jpg');
+  transition: background-image 0.5s ease-in-out;
+}
+
+
+/*********************************************************Vision y mision***************************************************************/
+.vision {
+  height: 450px;
+  background-color: #fcf9f3;
+  position: relative;
+  padding: 15px;
+  z-index: 999;
+  margin-top: 15px;
+}
+
+.vision h2 {
+  text-align: left;
+  font-family: 'Vortigra', sans-serif;
+  color: #961d81;
+  font-size: 75px;
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 176px;
+  font-weight: lighter;
+}
+
+.vision p {
+  position: absolute;
+  color: #961d81;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 22px;
+  width: 650px;
+  margin-left: 681px;
+  margin-top: 150px;
+  text-align: justify;
+}
+
+.mision {
+  height: 450px;
+  background-color: #92849b;
+  position: relative;
+  padding: 15px;
+  z-index: 999;
+}
+
+.mision h2 {
+  text-align: right;
+  font-family: 'Vortigra', sans-serif;
+  color: #fcf9f3;
+  font-size: 75px;
+  position: absolute;
+  margin-top: 165px;
+  margin-left: 1050px;
+  font-weight: lighter;
+}
+
+.mision p {
+  position: absolute;
+  color: #fcf9f3;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 22px;
+  width: 650px;
+  margin-left: 163px;
+  margin-top: 130px;
+  text-align: justify;
+}
+
+.vision h2,
+.mision h2 {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.23,1.01,.32,1);
+}
+
+.vision h2.visible,
+.mision h2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*********************************************************UBICACION****************************************************************/
+.ubicacion {
+  height: 600px;
+  background-color: #ffffff;
+  position: relative;
+  padding: 15px;
+  z-index: 999;
+}
+
+.ubicacion h1 {
+  text-align: center;
+  font-family: 'Vortigra', sans-serif;
+  color: #d293ac;
+  font-size: 65px;
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 800px;
+  font-weight: lighter;
+}
+
+.ubicacion p {
+  position: absolute;
+  color: #92849b;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 28px;
+  width: 700px;
+  margin-left: 730px;
+  margin-top: 290px;
+  text-align: center;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(.23,1.01,.32,1);
+}
+
+.ubicacion p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ubicacion:is(:hover, :focus-within) p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mapa {
+  width: 1700px;
+  position: absolute;
+  margin-left: -425px;
+  margin-top: 40px;
+  z-index: -1000;
+  border-radius: 10px;
+}
+
+.ubi {
+  width: 80px;
+  position: absolute;
+  margin-left: 1040px;
+  margin-top: 400px;
+  z-index: 1000;
+  }
+
+.ubi:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/*********************************************************Footer****************************************************************/
+footer {
+  background-color: #911a84;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 60px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 280px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 180px;
+  margin-top: 210px;
+  margin-left: 60px;
+  text-align: center;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #f0e1ef;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #ffffff;
+  transform: scale3d(1.05, 1.05, 1);
+  font-weight: bold;
+}
+
+.logofooter {
+  height: 100px;
+}
+
+.footer img {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  margin-left: -100px;
+  margin-top: -80px;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer img:hover {
+  transform: scale(1.05);
+}
+
+
+
+/********************************************RESPONSIVE TELEFONOS***************************************/
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+    height: auto;
+  }
+
+  .navbardiv {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .navlist {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navlist li {
+    width: 100%;
+  }
+
+  .navlist a {
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+
+  .logo {
+    position: static;
+    width: 140px;
+    margin: 0 0 10px 0;
+    text-align: left;
+  }
+
+  /* Menú desplegable */
+  .menu {
+    position: static;
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    padding: 1rem 0.5rem;
+    flex-direction: column;
+    box-shadow: none;
+    border-top: 2px solid #961d81;
+    z-index: 999;
+    gap: 0.5rem;
+  }
+
+  .columna {
+    min-width: 0;
+    margin-right: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .columna h4 {
+    font-size: 16px;
+    padding-bottom: 2px;
+  }
+
+  .columna a {
+    font-size: 15px;
+    padding: 6px 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* TELEFONOS */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer ul {
+    margin: 0;
+    align-items: center;
+  }
+
+  .footer p {
+    max-width: 100%;
+  }
+
+  .logofooter {
+    height: 80px;
+  }
+}
+
+
+
+
+/* Responsive general para simetría y buena colocación en toda la página */
+@media (max-width: 1200px) {
+  .navbardiv,
+  .footer {
+    max-width: 98vw;
+    padding: 0 1vw;
+  }
+  .quienes,
+  .vision,
+  .mision,
+  .ubicacion,
+  .diveslogan {
+    max-width: 98vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 2vw;
+  }
+  .mapa {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .quienes,
+  .vision,
+  .mision,
+  .ubicacion,
+  .diveslogan {
+    padding: 16px 1vw;
+    min-width: 0;
+    max-width: 100vw;
+    margin: 10px auto;
+    border-radius: 12px;
+  }
+  .quienes h2,
+  .vision h2,
+  .mision h2,
+  .ubicacion h1 {
+    font-size: 2rem;
+    margin: 24px 0 12px 0;
+    position: static;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .quienes p,
+  .vision p,
+  .mision p,
+  .ubicacion p {
+    position: static;
+    width: 100%;
+    max-width: 98vw;
+    margin: 0 auto 18px auto;
+    font-size: 1rem;
+    padding: 0 1vw;
+    text-align: justify;
+  }
+  .inimujer {
+    position: static;
+    width: 180px;
+    margin: 0 auto 18px auto;
+    display: block;
+  }
+  .eslogan {
+    position: static;
+    margin: 0 auto 18px auto;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .mapa {
+    width: 100vw;
+    margin: 20px auto 0 auto;
+    left: 0;
+    border-radius: 8px;
+  }
+  .ubi {
+    position: static;
+    width: 40px;
+    margin: 18px auto 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbardiv,
+  .footer {
+    padding: 0 2vw;
+    max-width: 100vw;
+  }
+  .logo {
+    width: 90px;
+    margin: 0 auto 10px auto;
+    position: static;
+    text-align: center;
+  }
+  .quienes,
+  .vision,
+  .mision,
+  .ubicacion,
+  .diveslogan {
+    padding: 8px 1vw;
+    border-radius: 6px;
+    margin: 8px auto;
+  }
+  .quienes h2,
+  .vision h2,
+  .mision h2,
+  .ubicacion h1 {
+    font-size: 1.1rem;
+    margin: 12px 0 8px 0;
+  }
+  .quienes p,
+  .vision p,
+  .mision p,
+  .ubicacion p {
+    font-size: 0.95rem;
+    padding: 0 2vw;
+  }
+  .footer img,
+  .logofooter {
+    width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    position: static;
+  }
+}
+
+/* Elimina posiciones absolutas y márgenes negativos en móvil/tablet */
+@media (max-width: 900px) {
+  .quienes h2,
+  .vision h2,
+  .mision h2,
+  .ubicacion h1,
+  .quienes p,
+  .vision p,
+  .mision p,
+  .ubicacion p,
+  .eslogan,
+  .inimujer,
+  .mapa,
+  .ubi {
+    position: static !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Ajusta el footer para simetría */
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    height: auto;
+    padding: 20px 2vw;
+  }
+  .footer ul {
+    margin: 0;
+    align-items: center;
+    padding: 0;
+  }
+  .footer p {
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+}
+
+/* Ajusta el botón de scroll en pantallas pequeñas */
+@media (max-width: 600px) {
+  #scrollTopBtn {
+    right: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+}
+
+/*******************************************SCROLL BUTTON***************************************************/
+
+#scrollTopBtn {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  z-index: 9999;
+  background: #961d81;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 2rem;
+  box-shadow: 0 2px 8px rgba(150,29,129,0.18);
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s, transform 0.3s;
+}
+#scrollTopBtn:hover {
+  background: #d0c2db;
+  color: #961d81;
+  transform: scale(1.08);
+}
+
+/*******************************************FORMULARIO DE CONTACTO***************************************************/
+
+
+
+
+
+
+.formulario-contacto {
+  max-width: 720px;
+  margin: 60px auto 80px;
+  padding: 24px;
+  background: #f8f6fa;
+  border: 1px solid #e9e1ef;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: 'Vortigra', sans-serif;
+  color: #961d81;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.formulario-contacto .fila,
+.formulario-contacto .fila-doble {
+  margin-top: 14px;
+}
+
+.formulario-contacto label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #3b2343;
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d5c9de;
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+  border-color: #961d81;
+  box-shadow: 0 0 0 3px rgba(150,29,129,.12);
+}
+
+.fila-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.fila-doble .campo { display: flex; flex-direction: column; }
+
+#btnEnviar {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 999px;
+  background: #961d81;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .05s ease, background .2s ease, opacity .2s ease;
+}
+#btnEnviar:disabled {
+  opacity: .6; cursor: not-allowed;
+}
+#btnEnviar:hover { background: #7d176c; }
+
+.mensaje { margin-top: 10px; font-weight: 600; }
+
+@media (max-width: 680px) {
+  .fila-doble { grid-template-columns: 1fr; }
+}
+
+/* Agrega esto en tu CSS para el botón y animación del formulario */
+.btn-agendar {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -90px;
+  padding: 12px 32px;
+  background: #fcf9f3;
+  color: #961d81;
+  border: 1px solid #961d81;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn-agendar:hover {
+  background: #961d81;
+  color: #fcf9f3;
+  transform: scale(1.05);
+}
+.formulario-contacto {
+  animation: fadeInForm 0.5s;
+  margin: 40px auto;
+  max-width: 600px;
+}
+@keyframes fadeInForm {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/********************************************************CAMBIOS**********************************************************************/
+/******************************************** RESPONSIVE AJUSTADO ********************************************/
+
+/* Mantener navbar horizontal en todas las resoluciones */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .navlist {
+    flex-direction: row !important;
+    gap: 1rem;
+    width: auto;
+    margin-left: 70px;
+    margin-top: -150px;
+  }
+
+  .navlist a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .logo {
+    width: 120px;
+    margin: 0;
+  }
+
+  .eslogan {
+    align-items: center;
+    left: 250px;
+    margin-top: -20px;
+  }
+}
+
+/* Ajustar secciones grandes */
+@media (max-width: 1200px) {
+  .quienes,
+  .vision,
+  .mision {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .quienes h2,
+  .vision h2,
+  .mision h2 {
+    font-size: 2rem;
+    margin: 0 auto 20px;
+    text-align: center;
+    position: static;
+  }
+
+  .quienes p,
+  .vision p,
+  .mision p {
+    font-size: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    position: static;
+  }
+}
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+  .quienes,
+  .vision,
+  .mision {
+    padding: 20px 15px;
+    margin: 15px auto;
+    border-radius: 10px;
+  }
+
+  .quienes h2,
+  .vision h2,
+  .mision h2 {
+    font-size: 1.5rem;
+  }
+
+  .quienes p,
+  .vision p,
+  .mision p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer más compacto */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+  }
+
+  .footer img {
+    width: 180px;
+    height: auto;
+  }
+
+  .footer ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .footer ul li a {
+    font-size: 14px;
+  }
+}
+
+/* Botón scroll reducido en móviles */
+@media (max-width: 600px) {
+  #scrollTopBtn {
+    right: 12px;
+    bottom: 12px;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
